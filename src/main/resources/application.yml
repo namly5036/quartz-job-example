@@ -1,0 +1,76 @@
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    context-path: ${CONTEXT_PATH:/job-management}
+spring:
+  application:
+    name: job-service
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+          lob:
+            non_contextual_creation: 'true'
+    hibernate:
+      ddl-auto: none
+    show-sql: ${JPA_SHOW_SQL:true}
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    sqlScriptEncoding: UTF-8
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:VrGmKfzQ7t}
+    url: ${DB_URL:jdbc:postgresql://postgresql-dev.databases:5432/pz_job}
+    hikari:
+      connection-timeout: ${DB_CONNECTION_TIMEOUT:180000}
+      minimum-idle: ${DB_MINIMUM_IDLE:10}
+      maximum-pool-size: ${DB_MAXIMUM_POOL_SIZE:5000}
+      idle-timeout: ${DB_IDLE_TIMEOUT:300000}
+      max-lifetime: ${DB_MAX_LIFETIME:1200000}
+      auto-commit: ${DB_AUTO_COMMIT:true}
+      dataSourceProperties:
+        prepStmtCacheSize: 250
+        prepStmtCacheSqlLimit: 2048
+        cachePrepStmts: true
+        useServerPrepStmts: true
+        useLocalSessionState: true
+        rewriteBatchedStatements: true
+        cacheResultSetMetadata: true
+        cacheServerConfiguration: true
+        elideSetAutoCommits: true
+        maintainTimeStats: false
+  liquibase:
+    enabled: true
+    database-change-log-table: id_databasechangelog
+    database-change-log-lock-table: id_databasechangeloglock
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  file:
+    name: ${LOGGING_FILE_NAME:propzy_job_service}
+    max-size: ${LOGGING_FILE_MAX_SIZE:10MB}
+    max-history: ${LOGGING_FILE_MAX_HISTORY:30}
+    path: ${LOGGING_PATH:/tmp/log}
+config:
+  identity:
+    host: ${IDENTITY_HOST:https://dev-core-team-v1.k8s.propzy.asia/identity}
+    client:
+      id: ${IDENTITY_CLIENT_ID:job-service}
+      secret: ${IDENTITY_CLIENT_SECRET:389b7cd0-b1fa-405f-ac8c-81b273576f8f}
+  notification-channel:
+    host: ${NOTI_CHANNEL_HOST:https://dev-core-team-v1.k8s.propzy.asia/notification-channel/api}
+  endpoint-service:
+    default-api: ${ENDPOINT_SERVICE_DEFAULT_API:https://dev-core-team-v1.k8s.propzy.asia/job-management/job/endpoint-placeholder}
