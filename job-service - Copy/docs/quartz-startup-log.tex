@@ -1,0 +1,95 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::       (v2.3.12.RELEASE)
+
+2024-03-02 22:13:21.041  INFO 22280 --- [           main] com.propzy.job.JobServiceApplication     : No active profile set, falling back to default profiles: default
+2024-03-02 22:13:22.003  INFO 22280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-02 22:13:22.072  INFO 22280 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 2 JPA repository interfaces.
+2024-03-02 22:13:22.361  INFO 22280 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=92c855f7-8834-3f0d-8fe2-c321709a718a
+2024-03-02 22:13:22.749  INFO 22280 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2024-03-02 22:13:22.758  INFO 22280 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-02 22:13:22.758  INFO 22280 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2024-03-02 22:13:22.853  INFO 22280 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-02 22:13:22.853  INFO 22280 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1791 ms
+2024-03-02 22:13:23.088  INFO 22280 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-03-02 22:13:23.258  INFO 22280 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-03-02 22:13:24.511  INFO 22280 --- [           main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.id_databasechangeloglock
+2024-03-02 22:13:24.515  INFO 22280 --- [           main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.id_databasechangeloglock
+2024-03-02 22:13:24.519  INFO 22280 --- [           main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.id_databasechangeloglock WHERE ID=1
+2024-03-02 22:13:24.542  INFO 22280 --- [           main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2024-03-02 22:13:24.559  INFO 22280 --- [           main] liquibase.changelog.DatabaseChangeLog    : Reading resource: db/changelog/migrations/V1653986884__init_database.sql
+2024-03-02 22:13:24.639  INFO 22280 --- [           main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.id_databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2024-03-02 22:13:24.642  INFO 22280 --- [           main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.id_databasechangelog
+2024-03-02 22:13:24.644  INFO 22280 --- [           main] l.c.StandardChangeLogHistoryService      : Reading from public.id_databasechangelog
+2024-03-02 22:13:24.645  INFO 22280 --- [           main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.id_databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2024-03-02 22:13:24.664  INFO 22280 --- [           main] l.lockservice.StandardLockService        : Successfully released change log lock
+2024-03-02 22:13:24.771  INFO 22280 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-02 22:13:24.842  INFO 22280 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2024-03-02 22:13:25.001  INFO 22280 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2024-03-02 22:13:25.148  INFO 22280 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2024-03-02 22:13:25.392  INFO 22280 --- [           main] Hibernate Types                          : This framework is proudly powered by:
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ _    _                           _     _
+| |  | |                         (_)   | |
+| |__| |_   _ _ __   ___ _ __ ___ _ ___| |_ ___ _ __   ___ ___
+|  __  | | | | '_ \ / _ \ '__/ __| / __| __/ _ \ '_ \ / __/ _ \
+| |  | | |_| | |_) |  __/ |  \__ \ \__ \ ||  __/ | | | (_|  __/
+|_|  |_|\__, | .__/ \___|_|  |___/_|___/\__\___|_| |_|\___\___|
+         __/ | |
+        |___/|_|
+
+At Hypersistence, we only build amazing tools, like Hibernate Types, Flexy Pool, or Hypersistence Optimizer.
+
+What if there were a tool that could automatically detect JPA and Hibernate performance issues?
+
+Hypersistence Optimizer is that tool! For more details, go to: 
+
+https://vladmihalcea.com/hypersistence-optimizer/
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+2024-03-02 22:13:25.994  INFO 22280 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-03-02 22:13:26.004  INFO 22280 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-02 22:13:26.297  INFO 22280 --- [           main] tionInformation$PropertyDescriptorSource : Couldn't read class metadata for interface java.util.Map. Input property calculation might fail!
+2024-03-02 22:13:26.999  INFO 22280 --- [           main] org.quartz.impl.StdSchedulerFactory      : Using default implementation for ThreadExecutor
+2024-03-02 22:13:27.011  INFO 22280 --- [           main] org.quartz.core.SchedulerSignalerImpl    : Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-03-02 22:13:27.011  INFO 22280 --- [           main] org.quartz.core.QuartzScheduler          : Quartz Scheduler v.2.3.2 created.
+2024-03-02 22:13:27.013  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : Using db table-based data access locking (synchronization).
+2024-03-02 22:13:27.015  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : JobStoreCMT initialized.
+2024-03-02 22:13:27.016  INFO 22280 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler meta-data: Quartz Scheduler (v2.3.2) 'PropzyClusteredScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is not clustered.
+
+2024-03-02 22:13:27.016  INFO 22280 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler 'PropzyClusteredScheduler' initialized from an externally provided properties instance.
+2024-03-02 22:13:27.016  INFO 22280 --- [           main] org.quartz.impl.StdSchedulerFactory      : Quartz scheduler version: 2.3.2
+2024-03-02 22:13:27.016  INFO 22280 --- [           main] org.quartz.core.QuartzScheduler          : JobFactory set to: com.propzy.job.config.AutowiringSpringBeanJobFactory@96b00fb
+2024-03-02 22:13:27.040  INFO 22280 --- [           main] tionInformation$PropertyDescriptorSource : Couldn't read class metadata for interface java.util.Map. Input property calculation might fail!
+2024-03-02 22:13:27.283  WARN 22280 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-03-02 22:13:27.538  INFO 22280 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2024-03-02 22:13:27.648  WARN 22280 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2024-03-02 22:13:27.648  INFO 22280 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2024-03-02 22:13:27.653  WARN 22280 --- [           main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2024-03-02 22:13:27.653  INFO 22280 --- [           main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2024-03-02 22:13:27.753  INFO 22280 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2024-03-02 22:13:27.897  WARN 22280 --- [           main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2024-03-02 22:13:28.242  INFO 22280 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2024-03-02 22:13:28.699  INFO 22280 --- [           main] o.s.s.quartz.SchedulerFactoryBean        : Starting Quartz Scheduler now
+2024-03-02 22:13:28.724  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : Freed 0 triggers from 'acquired' / 'blocked' state.
+2024-03-02 22:13:28.730  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2024-03-02 22:13:28.731  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : Recovery complete.
+2024-03-02 22:13:28.733  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 'complete' triggers.
+2024-03-02 22:13:28.735  INFO 22280 --- [           main] o.s.s.quartz.LocalDataSourceJobStore     : Removed 0 stale fired job entries.
+2024-03-02 22:13:28.750  INFO 22280 --- [           main] org.quartz.core.QuartzScheduler          : Scheduler PropzyClusteredScheduler_$_NON_CLUSTERED started.
+2024-03-02 22:13:28.765  INFO 22280 --- [           main] com.propzy.job.JobServiceApplication     : Started JobServiceApplication in 9.537 seconds (JVM running for 10.569)
+2024-03-02 22:13:29.257  INFO 22280 --- [3)-172.25.240.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-02 22:13:29.257  INFO 22280 --- [3)-172.25.240.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-02 22:13:29.265  INFO 22280 --- [3)-172.25.240.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
